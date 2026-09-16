@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    color: #0F172A; /* Tailwind slate-900 */
+    background-color: #F1F5F9; /* slate-100 */
+  }
+
+  *, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #E2E8F0; /* slate-200 */
+  }
+}
+
+@layer utilities {
+  /* =========================================================
+     CRISP, HIGH-CONTRAST INSTITUTIONAL FINTECH DESIGN SYSTEM
+     All fine-lined borders explicitly calibrated to integer 1px
+     Zero-blurriness, high legibility slate-900 architecture
+     ========================================================= */
+
+  /* 1. Primary White Banking Card - Crisp 1px border & clean depth */
+  .clay-card,
+  .fintech-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+    color: #0F172A;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .clay-card:hover,
+  .fintech-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 2px 6px 0 rgba(15, 23, 42, 0.06);
+  }
+
+  /* 2. Soft Tinted Card */
+  .clay-card-soft,
+  .fintech-card-soft {
+    background-color: #F8FAFC;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    box-shadow: none;
+    color: #0F172A;
+  }
+
+  /* 3. Executive Midnight Slate Vault Card (High Contrast Slate-900/Navy) */
+  .clay-card-emerald,
+  .fintech-card-navy {
+    background-color: #0F172A;
+    border-radius: 14px;
+    color: #FFFFFF;
+    border: 1px solid #1E293B;
+    box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.15);
+    position: relative;
+  }
+
+  /* 4. Gold / Amber Accent Card */
+  .clay-card-gold,
+  .fintech-card-amber {
+    background-color: #FFFBEB;
+    border-radius: 12px;
+    color: #78350F;
+    border: 1px solid #FCD34D;
+    box-shadow: 0 1px 2px 0 rgba(217, 119, 6, 0.04);
+  }
+
+  /* 5. Soft Emerald Trust Card */
+  .clay-card-emerald-soft,
+  .fintech-card-emerald {
+    background-color: #F0FDF4;
+    border-radius: 12px;
+    border: 1px solid #86EFAC;
+    color: #064E3B;
+    box-shadow: 0 1px 2px 0 rgba(16, 185, 129, 0.04);
+  }
+
+  /* 6. Soft Violet Card */
+  .clay-card-purple,
+  .fintech-card-purple {
+    background-color: #FAF5FF;
+    border-radius: 12px;
+    border: 1px solid #D8B4FE;
+    color: #581C87;
+    box-shadow: 0 1px 2px 0 rgba(147, 51, 234, 0.04);
+  }
+
+  /* =========================================================
+     PRECISION FINTECH ACTION BUTTONS (INTEGER 1PX EDGES)
+     ========================================================= */
+
+  .clay-btn,
+  .fintech-btn {
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    border: 1px solid transparent;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .clay-btn:active,
+  .fintech-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Emerald Trust Button */
+  .clay-btn-emerald,
+  .fintech-btn-emerald {
+    background-color: #059669;
+    color: #FFFFFF;
+    border: 1px solid #047857;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .clay-btn-emerald:hover,
+  .fintech-btn-emerald:hover {
+    background-color: #047857;
+  }
+
+  /* Gold / Amber Action Button */
+  .clay-btn-gold,
+  .fintech-btn-amber {
+    background-color: #D97706;
+    color: #FFFFFF;
+    border: 1px solid #B45309;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .clay-btn-gold:hover,
+  .fintech-btn-amber:hover {
+    background-color: #B45309;
+  }
+
+  /* Dark Executive Button (Slate-900 Solid) */
+  .fintech-btn-dark {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    border: 1px solid #020617;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .fintech-btn-dark:hover {
+    background-color: #1E293B;
+  }
+
+  /* =========================================================
+     INSETS, INPUTS & ICON CONTAINERS (CRISP INTEGER 1PX)
+     ========================================================= */
+
+  .clay-inset,
+  .clay-well,
+  .fintech-inset {
+    background-color: #F8FAFC;
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    color: #0F172A;
+  }
+
+  .fintech-inset:focus-within {
+    border-color: #059669;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+  }
+
+  .clay-inset-emerald,
+  .fintech-inset-emerald {
+    background-color: #F0FDF4;
+    border-radius: 8px;
+    border: 1px solid #86EFAC;
+    color: #064E3B;
+  }
+
+  .clay-icon-box,
+  .fintech-icon-box {
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+  }
+
+  .clay-badge,
+  .fintech-badge {
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    border: 1px solid transparent;
+  }
+
+  /* Bottom Navigation Bar - Crisp 1px Integer Border */
+  .clay-nav-bar,
+  .fintech-nav-bar {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 4px 16px 0 rgba(15, 23, 42, 0.08);
+  }
+
+  /* Marquee animation for live announcements */
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 28s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Scrollbar suppression */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
